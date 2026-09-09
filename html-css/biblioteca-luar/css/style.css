@@ -1,0 +1,33 @@
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:rgb(196, 184, 255);
+}
+
+h1,h2,h3{
+    color:rgba(21, 2, 39, 0.886)
+}
+
+p{
+    font-size: 1.0rem;
+    color:rgb(47, 6, 85)
+}
+
+#hero{
+    background-color:rgb(26, 3, 144);
+}
+
+#destaques{
+    background-color:rgb(9, 3, 42);
+}
+
+#eventos{
+    background-color:rgb(196, 184, 255);
+}
+
+#sobre{
+    background-color:rgb(196, 184, 255);
+}
+
+#newsletter{
+    background-color:rgb(196, 184, 255);
+}
