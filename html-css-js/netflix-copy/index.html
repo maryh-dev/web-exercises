@@ -1,0 +1,90 @@
+<!-- Declaração do tipo de documento HTML5 -->
+<!DOCTYPE html>
+<!-- Elemento raiz da página, com idioma português brasileiro -->
+<html lang="pt-br">
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 para suportar acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Configura a viewport para dispositivos móveis, garantindo responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>Netflix</title>
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Link para o arquivo JavaScript, com defer para executar após o carregamento do HTML -->
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Logo da Netflix posicionada no canto superior direito -->
+        <img src="assets/logo-netflix.png" alt="Logo Netflix" class="logo-netflix">
+        <!-- Botão para alternar entre modo escuro e claro, com acessibilidade -->
+        <button id="theme-toggle" aria-label="Alternar entre modo escuro e claro">
+            <!-- Ícones para sol (modo claro) e lua (modo escuro) -->
+            <span class="theme-icon sun">🔆</span>
+            <span class="theme-icon moon">🌙</span>
+        </button>
+        <!-- Título principal da página -->
+        <h1>Who's watching?</h1>
+        <!-- Seção para seleção de perfis, com rótulo para acessibilidade -->
+        <section class="profiles" aria-label="Selecionar perfil">
+            <!-- Lista não ordenada de perfis -->
+            <ul>
+                <!-- Primeiro perfil -->
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile" aria-label="Selecionar Perfil 1">
+                        <figure>
+                            <!-- Imagem do perfil -->
+                            <img src="assets/perfil-1.jpg" alt="Desenho de um gatinho branco estilo cartoon deitado de lado com fone de ouvido">
+                            <!-- Nome do perfil -->
+                            <figcaption>Till!!</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <!-- Segundo perfil -->
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile" aria-label="Selecionar Perfil 2">
+                        <figure>
+                            <img src="assets/perfil-2.jpg" alt="Pelúcia branca de cachorro em frente ao mar azul">
+                            <figcaption>Mizi ☆</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <!-- Terceiro perfil -->
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile" aria-label="Selecionar Perfil 3">
+                        <figure>
+                            <img src="assets/perfil-3.jpg" alt="Gato preto com olhos cemicerrados em fundo claro, estilo desenho">
+                            <figcaption>Sua ♡</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <!-- Quarto perfil -->
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile" aria-label="Selecionar Perfil 4">
+                        <figure>
+                            <img src="assets/perfil-4.jpg" alt="Hamster com capuz laranja em formato de cenoura olhando para a câmera">
+                            <figcaption>Ivan0_0</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <!-- Botão para adicionar novo perfil -->
+                <li>
+                    <button type="button" class="add-profile" aria-label="Adicionar novo perfil">
+                        <figure>
+                            <!-- Ícone de adição -->
+                            <span class="add-icon">+</span>
+                            <figcaption>Add profile</figcaption>
+                        </figure>
+                    </button>
+                </li>
+            </ul>
+        </section>
+        <!-- Rodapé com botão para gerenciar perfis -->
+        <footer>
+            <button id="manage-profiles" aria-label="Gerenciar perfis">Manage profiles</button>
+        </footer>
+    </main>
+</body>
+</html>

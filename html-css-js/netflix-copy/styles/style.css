@@ -1,0 +1,470 @@
+/* Arquivo de estilos CSS para a página de perfis da Netflix.
+   Este arquivo define a aparência visual da página, incluindo cores, layouts e responsividade. */
+
+/* Estilo geral da página */
+body {
+    /* Fundo preto padrão (modo escuro) */
+    background-color: #000;
+    /* Texto branco */
+    color: #fff;
+    /* Fonte similar à da Netflix */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Remove margens e preenchimentos padrão */
+    margin: 0;
+    padding: 0;
+
+    /* Centraliza o conteúdo na tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    /* Transição suave para mudanças de cor */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo claro - ativado quando o body tem a classe 'light-mode' */
+body.light-mode {
+    /* Fundo branco */
+    background-color: #fff;
+    /* Texto preto */
+    color: #000;
+}
+
+/* Botão de alternar modo (sol/lua) */
+#theme-toggle {
+    /* Posicionamento fixo no canto superior direito */
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000; /* Fica acima de outros elementos */
+
+    /* Tamanho do botão */
+    width: 3rem;
+    height: 3rem;
+    /* Repetição de position, pode ser removida */
+
+    /* Forma circular */
+    border-radius: 50%;
+
+    /* Centraliza o conteúdo interno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Remove preenchimento interno */
+    padding: 0;
+    
+    /* Fundo semi-transparente com efeito de blur */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para navegadores WebKit */
+    /* Sem borda */
+    border: none;
+    /* Cursor de mão ao passar o mouse */
+    cursor: pointer;
+    /* Sombra para dar profundidade */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Transição suave para efeitos hover */
+    transition: all 0.3s ease;
+}
+
+/* Logo Netflix */
+.logo-netflix {
+    /* Posicionamento fixo no canto superior direito, à esquerda do botão de tema */
+    position: fixed;
+    top: 1rem;
+    right: 5rem;
+    z-index: 1000; /* Mesmo nível do botão de tema */
+    height: 3rem; /* Altura fixa */
+    width: auto; /* Largura automática para manter proporção */
+}
+
+/* Efeito hover no botão de tema */
+#theme-toggle:hover {
+    /* Sombra mais intensa no hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes para o botão de tema no modo claro */
+body.light-mode #theme-toggle {
+    /* Fundo escuro semi-transparente */
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode #theme-toggle:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Media queries para responsividade - telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+    #theme-toggle {
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+
+    .logo-netflix {
+        height: 2.5rem;
+        top: 0.75rem;
+        right: 4rem; /* Ajusta posição para não sobrepor o botão */
+    }
+
+    .theme-icon {
+        font-size: 1rem; /* Ícones menores */
+    }
+}
+
+/* Media queries para dispositivos móveis - telas menores que 480px */
+@media (max-width: 480px) {
+    #theme-toggle {
+        width: 2rem;
+        height: 2rem;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+
+    .logo-netflix {
+        height: 2rem;
+        top: 0.5rem;
+        right: 3rem;
+    }
+
+    .theme-icon {
+        font-size: 0.8rem;
+    }
+}
+
+/* Ajuste adicional para o botão no modo claro (duplicado, pode ser removido) */
+body.light-mode #theme-toggle {
+    background: rgba(0, 0, 0, 0.1);
+    color: #000;
+    border-color: #000;
+}
+
+/* Estilos para os ícones do tema (sol e lua) */
+.theme-icon {
+    font-size: 1.2rem; /* Tamanho do ícone */
+    position: absolute; /* Posicionamento absoluto dentro do botão */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+/* Ícone do sol - visível por padrão */
+.sun {
+    opacity: 1; /* Totalmente visível */
+    transform: scale(1) rotate(0deg); /* Escala e rotação normais */
+}
+
+/* Ícone da lua - invisível por padrão */
+.moon {
+    opacity: 0; /* Invisível */
+    transform: scale(0.8) rotate(180deg); /* Menor e rotacionado */
+}
+
+/* No modo claro, mostra a lua e esconde o sol */
+body.light-mode .sun {
+    opacity: 0;
+    transform: scale(0.8) rotate(180deg);
+}
+
+body.light-mode .moon {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+/* Container principal da página */
+main {
+    text-align: center; /* Centraliza o texto */
+    max-width: 1200px; /* Largura máxima */
+    padding: 20px; /* Preenchimento interno */
+}
+
+/* Título principal */
+h1 {
+    font-size: 3rem; /* Tamanho grande da fonte */
+    margin-bottom: 2rem; /* Espaço abaixo */
+    font-weight: 300; /* Peso da fonte leve */
+}
+
+/* Lista de perfis */
+.profiles ul {
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove preenchimento */
+
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 2rem; /* Espaço entre itens */
+    flex-wrap: wrap; /* Quebra linha se necessário */
+}
+
+/* Botão do perfil */
+.profile {
+    background: none; /* Sem fundo */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor de mão */
+    text-decoration: none; /* Remove sublinhado */
+
+    transition: transform 0.3s ease; /* Transição suave para escala */
+
+    /* Organização interna */
+    display: flex;
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centralizados */
+    padding: 0; /* Sem preenchimento */
+}
+
+/* Efeito hover no perfil - aumenta ligeiramente */
+.profile:hover {
+    transform: scale(1.1);
+}
+
+/* Elemento figure dentro do perfil */
+.profile figure {
+    margin: 0; /* Remove margem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imagem do perfil */
+.profile img {
+    width: 150px; /* Largura fixa */
+    height: 150px; /* Altura fixa */
+    border-radius: 50%; /* Forma circular */
+    object-fit: cover; /* Corta imagem para caber */
+
+    border: 3px solid transparent; /* Borda invisível por padrão */
+    transition: border-color 0.3s ease; /* Transição para cor da borda */
+}
+
+/* Borda branca no hover */
+.profile:hover img {
+    border-color: #fff;
+}
+
+/* Nome do perfil */
+.profile figcaption {
+    margin-top: 1rem; /* Espaço acima */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    font-weight: 400; /* Peso normal */
+    color: #ccc; /* Cor cinza clara */
+    /* mais suave */
+}
+
+/* Nome fica branco no hover */
+.profile:hover figcaption {
+    color: #fff; /* Branco */
+}
+
+/* Botão de adicionar perfil - similar ao perfil normal */
+.add-profile {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none; /* Remove sublinhado */
+
+    transition: transform 0.3s ease;
+
+    /* organização interna */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+/* Efeito hover no botão adicionar */
+.add-profile:hover {
+    transform: scale(1.1);
+}
+
+/* FIGURE para adicionar perfil */
+.add-profile figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ícone de adicionar (círculo com +) */
+.add-icon {
+    width: 150px; /* Mesmo tamanho da imagem */
+    height: 150px;
+    border-radius: 50%; /* Circular */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    display: flex;
+    justify-content: center; /* Centraliza o + */
+    align-items: center;
+    font-size: 4rem; /* Tamanho grande do + */
+    color: #ccc; /* Cor cinza */
+    border: 3px solid transparent; /* Borda invisível */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Borda branca e fundo mais opaco no hover */
+.add-profile:hover .add-icon {
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Nome do botão adicionar */
+.add-profile figcaption {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ccc;
+}
+
+/* Nome fica branco no hover */
+.add-profile:hover figcaption {
+    color: #fff;
+}
+
+/* Ajustes para o modo claro */
+body.light-mode .profile figcaption {
+    color: #666; /* Cinza escuro */
+}
+
+body.light-mode .profile:hover figcaption {
+    color: #000; /* Preto */
+}
+
+body.light-mode .profile:hover img {
+    border-color: #000; /* Borda preta */
+}
+
+body.light-mode .add-profile figcaption {
+    color: #666;
+}
+
+body.light-mode .add-profile:hover figcaption {
+    color: #000;
+}
+
+body.light-mode .add-profile:hover .add-icon {
+    border-color: #000;
+    background-color: rgba(0, 0, 0, 0.1); /* Fundo escuro semi-transparente */
+}
+
+/* Footer - rodapé da página */
+footer {
+    position: fixed; /* Fixo na tela */
+    bottom: 1rem; /* Distância do fundo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para o centro */
+    z-index: 1000; /* Fica acima de outros elementos */
+}
+
+#manage-profiles {
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de blur */
+    -webkit-backdrop-filter: blur(10px); /* Para Safari */
+    border: none; /* Sem borda */
+    color: #ccc; /* Cor do texto */
+    padding: 0.5rem 1rem; /* Preenchimento interno */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: all 0.3s ease; /* Transições suaves */
+}
+
+#manage-profiles:hover {
+    color: #fff; /* Texto branco no hover */
+    background: rgba(255, 255, 255, 0.2); /* Fundo mais opaco */
+}
+
+body.light-mode #manage-profiles {
+    background: rgba(0, 0, 0, 0.1); /* Fundo escuro no modo claro */
+    color: #666; /* Texto cinza escuro */
+}
+
+body.light-mode #manage-profiles:hover {
+    color: #000; /* Texto preto */
+    background: rgba(0, 0, 0, 0.2); /* Fundo mais opaco */
+}
+
+/* Responsividade para tablets (largura máxima 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Título menor */
+    }
+
+    .profiles ul {
+        gap: 1.5rem; /* Espaço menor entre perfis */
+    }
+
+    .profile img {
+        width: 120px; /* Imagens menores */
+        height: 120px;
+    }
+
+    .profile figcaption {
+        font-size: 1rem; /* Texto menor */
+    }
+
+    .add-icon {
+        width: 120px;
+        height: 120px;
+        font-size: 3rem; /* Ícone menor */
+    }
+
+    .add-profile figcaption {
+        font-size: 1rem;
+    }
+
+    footer {
+        bottom: 0.75rem; /* Footer mais próximo do fundo */
+    }
+
+    #manage-profiles {
+        font-size: 0.9rem; /* Botão menor */
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Responsividade para dispositivos móveis (largura máxima 480px) */
+@media (max-width: 480px) {
+    main {
+        padding: 10px; /* Preenchimento menor */
+    }
+
+    h1 {
+        font-size: 2rem; /* Título ainda menor */
+        margin-bottom: 1.5rem;
+    }
+
+    .profiles ul {
+        gap: 1rem; /* Espaço ainda menor */
+        flex-direction: column; /* Perfis em coluna */
+        align-items: center;
+    }
+
+    .profile img {
+        width: 100px; /* Imagens pequenas */
+        height: 100px;
+    }
+
+    .profile figcaption {
+        font-size: 0.9rem;
+    }
+
+    .add-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem; /* Ícone pequeno */
+    }
+
+    .add-profile figcaption {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        bottom: 0.5rem; /* Footer muito próximo do fundo */
+    }
+
+    #manage-profiles {
+        font-size: 0.8rem; /* Botão pequeno */
+        padding: 0.3rem 0.6rem;
+    }
+}
