@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Tech Experience 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo da Tech Experience">
+            <h1>Tech Experience 2026</h1>
+        </div>
+        <nav>
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="#">Inscrição</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Formulário de Inscrição</h2>
+
+        <form>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome completo">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail">
+
+                <label for="tel">Telefone:</label>
+                <input type="tel" id="tel" placeholder="Digite seu telefone">
+
+                <label for="data">Data de nascimento:</label>
+                <input type="date" id="data">
+            </fieldset>
+
+            <fieldset>
+                <legend>Perfil</legend>
+
+                <p>Você é:</p>
+                <div class="inline">
+                <input id="estudante" type="radio" name="perfil" value="estudante">
+                <label for="estudante">Estudante</label>
+                <input id="professor" type="radio" name="perfil" value="professor">
+                <label for="professor">Professor</label>
+                <input id="profissional" type="radio" name="perfil" value="profissional">
+                <label for="profissional">Profissional da área</label>
+                </div>
+
+                <p>Áreas de interesse:</p>
+                <div class="inline">
+                <input type="checkbox" id="frontend" name="interesse" value="frontend">
+                <label for="frontend">Frontend</label>
+                <input type="checkbox" id="backend" name="interesse" value="backend">
+                <label for="backend">Backend</label>
+                <input type="checkbox" id="mobile" name="interesse" value="mobile">
+                <label for="mobile">Mobile</label>
+                <input type="checkbox" id="dados" name="interesse" value="dados">
+                <label for="dados">Dados</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Localização</legend>
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade">
+
+                <label for="estado">Estado:</label>
+                <select name="estado" id="estado">
+                    <option value="SELECIONE">Selecione</option>
+                    <option value="BA">Bahia</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PE">Pernambuco</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Extras</legend>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" rows="4"></textarea>
+
+                <div class="inline">
+                <input type="checkbox" id="novidades">
+                <label for="novidades">Desejo receber novidades por e-mail</label>
+                </div>
+            </fieldset>
+
+            <div class="botoes">
+            <button class="btn btn-secundario" type="reset">Limpar Formulário</button>
+            <button class="btn" type="submit">Finalizar Inscrição</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2026 - TechWave Eventos</p>
+        <img src="img/logo.png" alt="Logo da Tech Experience">
+    </footer>
+</body>
+</html>
