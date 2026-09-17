@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexora Tech | Contrate nosso serviço</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container navegacao">
+            <a href="index.html" class="marca">
+                <img src="imagens/logo.jpg" alt="Logo Nexora Tech">
+                <h1>NEXORA TECH</h1>
+            </a>
+
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a class="ativo" href="contato.html">Contrate nosso serviço</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-banner">
+            <div class="container">
+                <span class="etiqueta">FALE COM A GENTE</span>
+                <h2>Vamos tirar sua ideia do papel?</h2>
+                <p>Conte o que você precisa e nossa equipe entrará em contato.</p>
+            </div>
+        </section>
+
+        <section class="contato container">
+            <div class="contato-info">
+                <span class="etiqueta">FALE COM NOSSA EQUIPE</span>
+                <h2>Estamos prontos para ajudar.</h2>
+                <p>
+                    Solicite um orçamento ou conheça melhor nossos produtos
+                    e serviços.
+                </p>
+
+                <div class="informacao">
+                    <h3>E-mail</h3>
+                    <p>contato@nexoratech.com.br</p>
+                </div>
+
+                <div class="informacao">
+                    <h3>Atendimento</h3>
+                    <p>Segunda a sexta, das 8h às 17h.</p>
+                </div>
+            </div>
+
+            <form class="formulario">
+                <h2>Solicite um orçamento</h2>
+
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome"
+                       placeholder="Digite seu nome" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email"
+                       placeholder="seuemail@exemplo.com" required>
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone"
+                       placeholder="(00) 00000-0000">
+
+                <label for="servico">Serviço ou produto desejado</label>
+                <select id="servico" name="servico" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="web">Desenvolvimento Web</option>
+                    <option value="apps">Aplicativos</option>
+                    <option value="iot">Internet das Coisas</option>
+                    <option value="consultoria">Consultoria em TI</option>
+                </select>
+
+                <label for="mensagem">Descreva sua necessidade</label>
+                <textarea id="mensagem" name="mensagem" rows="5"
+                          placeholder="Conte um pouco sobre seu projeto..."
+                          required></textarea>
+
+                <button type="submit" class="botao">Enviar solicitação</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p>© 2026 Nexora Tech. Todos os direitos reservados.</p>
+            <p>Tecnologia que conecta ideias ao futuro.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

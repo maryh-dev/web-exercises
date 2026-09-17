@@ -1,0 +1,444 @@
+:root {
+    --fundo: #0b1120;
+    --verde: #00e6a0;
+    --branco: #f5f7fa;
+    --texto: #b9c4d5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho {
+    padding: 20px 0;
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.marca img {
+    width: 40px;
+}
+
+.marca h1 {
+    color: var(--verde);
+    font-size: 22px;
+}
+
+.menu {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: var(--verde);
+    transition: 0.3s;
+}
+
+/* ===== ETIQUETA (usada em várias seções) ===== */
+.etiqueta {
+    display: inline-block;
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* ===== HERO (index) ===== */
+.hero {
+    background: linear-gradient(var(--verde), var(--fundo)), url('imagens/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-texto,
+.hero-imagem {
+    flex: 1;
+}
+
+.hero-imagem img {
+    border-radius: 12px;
+}
+
+.hero-texto h2 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin: 10px 0 20px;
+}
+
+.hero-texto h2 span {
+    color: var(--verde);
+}
+
+.hero-texto p {
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+/* ===== BOTÕES ===== */
+.botao {
+    display: inline-block;
+    background-color: var(--fundo);
+    color: var(--verde);
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid var(--verde);
+}
+
+.botao:hover {
+    background-color: var(--verde);
+    color: var(--fundo);
+    transform: translateY(-3px);
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: var(--fundo);
+}
+
+.botao-claro {
+    background-color: var(--verde);
+    color: var(--fundo);
+    border-color: var(--verde);
+}
+
+.botao-claro:hover {
+    background-color: transparent;
+    color: var(--verde);
+}
+
+/* ===== SEÇÃO DE SERVIÇOS (cartões) ===== */
+.titulo-secao {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.grade-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.cartao {
+    flex: 1 1 240px;
+    background-color: var(--fundo);
+    border: 2px solid var(--texto);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.cartao img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.cartao-conteudo {
+    padding: 25px;
+}
+
+.cartao:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: var(--verde);
+}
+
+.cartao-conteudo h3,
+.cartao-conteudo a {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--verde);
+    text-decoration: none;
+}
+
+.cartao-conteudo p {
+    margin: 10px 0;
+}
+
+/* ===== CHAMADA (index e sobre) ===== */
+.chamada {
+    background-color: var(--verde);
+    color: var(--fundo);
+    padding: 60px 0;
+}
+
+.chamada-conteudo {
+    text-align: center;
+}
+
+.chamada-conteudo h2 {
+    margin-bottom: 10px;
+}
+
+.chamada-conteudo p {
+    color: var(--fundo);
+    margin-bottom: 25px;
+}
+
+/* ===== BANNER DE PÁGINA INTERNA (sobre, contato) ===== */
+.pagina-banner {
+    background-color: var(--verde);
+    color: var(--fundo);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.pagina-banner p {
+    color: var(--fundo);
+}
+
+/* ===== SOBRE: HISTÓRIA ===== */
+.historia {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    padding: 80px 0;
+}
+
+.historia-imagem,
+.historia-texto {
+    flex: 1;
+}
+
+.historia-imagem img {
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.historia-texto p {
+    margin-bottom: 15px;
+}
+
+/* ===== SOBRE: MISSÃO, VISÃO E VALORES ===== */
+.valores {
+    background-color: rgba(255,255,255,0.03);
+    padding: 80px 0;
+}
+
+.grade-valores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.valor {
+    flex: 1 1 240px;
+    background-color: var(--fundo);
+    border: 2px solid var(--texto);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.valor h3 {
+    color: var(--verde);
+    margin-bottom: 10px;
+}
+
+/* ===== CONTATO ===== */
+.contato {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 80px 0;
+}
+
+.contato-info {
+    flex: 0.8;
+}
+
+.contato-info h2 {
+    margin-bottom: 15px;
+}
+
+.contato-info p {
+    margin-bottom: 20px;
+}
+
+.informacao {
+    margin-bottom: 20px;
+}
+
+.informacao h3 {
+    color: var(--verde);
+    font-size: 16px;
+}
+
+.formulario {
+    flex: 1.2;
+    background-color: var(--fundo);
+    border: 2px solid var(--texto);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.formulario h2 {
+    margin-bottom: 20px;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid var(--texto);
+    font-size: 16px;
+    background-color: var(--fundo);
+    color: var(--branco);
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    border: 1px solid var(--verde);
+    box-shadow: 0 0 5px var(--verde);
+    outline: none;
+}
+
+.formulario button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    padding: 30px 0;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .hero-conteudo,
+    .historia,
+    .contato {
+        flex-direction: column;
+    }
+
+    .hero-imagem {
+        order: -1; /* imagem sobe antes do texto no hero, opcional */
+    }
+
+    .contato-info,
+    .formulario {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .navegacao {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .hero-texto h2 {
+        font-size: 32px;
+    }
+
+    .hero-texto p {
+        max-width: 100%;
+    }
+
+    .grade-servicos,
+    .grade-valores {
+        gap: 15px;
+    }
+
+    .historia,
+    .contato,
+    .valores,
+    .chamada,
+    .pagina-banner {
+        padding: 50px 0;
+    }
+
+    .rodape-conteudo {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
