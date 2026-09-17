@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Educa Tech</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="./images/logo.png" alt="Logo da Educa Tech">
+        <h1>Educa Tech</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina-titulo">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco e tire suas dúvidas.</p>
+        </section>
+
+       <section class="formulario-container">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+            <form>
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
+                </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Modalidade</legend>
+                    <div class="opcao">
+                        <input type="radio" id="presencial" name="modalidade" value="presencial">
+                        <label for="presencial">Presencial</label>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="radio" id="online" name="modalidade" value="online">
+                        <label for="online">Online</label>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="radio" id="semi-presencial" name="modalidade" value="semi-presencial">
+                        <label for="semi-presencial">Semi-Presencial</label>
+                    </div>
+                </fieldset>
+            
+                <fieldset>
+                    <legend>Assuntos de interesse</legend>
+                    
+                    <div class="opcao">
+                        <input type="checkbox" name="assuntos" id="cursos" value="cursos">
+                        <label for="cursos">Cursos</label>
+                    </div>
+                    
+                    <div class="opcao">
+                        <input type="checkbox" name="assuntos" id="valores" value="valores">
+                        <label for="valores">Valores</label>
+                    </div>
+                    
+                    <div class="opcao">
+                        <input type="checkbox" name="assuntos" id="matricula" value="matricula">
+                        <label for="matricula">Matricula</label>
+                    </div>
+                    
+                    <div class="opcao">
+                        <input type="checkbox" name="assuntos" id="outros" value="outros">
+                        <label for="outros">Outros</label>
+                    </div>
+                </fieldset>
+
+                 <div class="campo">
+                    <label for="curso">Curso de interesse:</label>
+
+                    <select name="curso" id="curso">
+                        <option value="">Selecione um curso</option>
+                        <option value="web">Desenvolvimento Web</option>
+                        <option value="logica">Lógica de Programação</option>
+                        <option value="banco-dados">Banco de Dados</option>
+                        <option value="programacao">Desenvolvimento Mobile</option>
+                    </select>
+                </div>
+    
+                <div class="campo">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea name="mensagem" id="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
+                </div>
+
+                <div class="botoes">
+                    <button type="reset">Limpar</button>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Educa Tech. Todos os direitos reservados.</p>
+        <address>
+            <p>Endereço: Rua Exemplo, 123 - Cidade, Estado</p>
+            <p>Telefone: (11) 1234-5678</p>
+            <p>Email: contato@educatech.com</p>
+        </address>
+    </footer>
+    
+</body>
+</html>
+
