@@ -1,0 +1,80 @@
+:root {
+    --fundo: #100b1a;
+    --fundo-card: #191126;
+    --roxo: #9b6cff;
+    --roxo-hover: #b58cff;
+    --texto: #f5f0ff;
+    --texto-secundario: #b9accf;
+    --borda: #302344;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 24px 50px;
+}
+
+header h1 {
+    color: var(--roxo);
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+header p {
+    color: var(--texto-secundario);
+    font-size: 18px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+}
+
+section {
+    margin-bottom: 45px;
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--borda);
+    padding-bottom: 10px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    list-style: none;
+}
+
+li a {
+    display: block;
+    background-color: var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--texto);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+li a:hover {
+    border-color: var(--roxo);
+    color: var(--roxo-hover);
+    transform: translateY(-3px);
+}
