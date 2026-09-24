@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Exercises | Maryh</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Web Exercises</h1>
+        <p>Meus exercícios e projetos de desenvolvimento web.</p>
+    </header>
+
+    <main id="projetos">
+        <p>Carregando projetos...</p>
+    </main>
+
+    <script>
+        const usuario = "maryh-dev";
+        const repositorio = "web-exercises";
+        const branch = "main";
+
+        const api = `https://api.github.com/repos/${usuario}/${repositorio}/git/trees/${branch}?recursive=1`;
+
+        async function carregarProjetos() {
+            const resposta = await fetch(api);
+            const dados = await resposta.json();
+
+            const projetos = dados.tree.filter(
+                arquivo => arquivo.path.endsWith("/index.html")
+            );
+
+            const categorias = {};
+
+            projetos.forEach(projeto => {
+                const partes = projeto.path.split("/");
+
+                // Ignora o index.html da raiz
+                if (partes.length < 2) return;
+
+                const categoria = partes[0];
+                const nome = partes[partes.length - 2];
+
+                if (!categorias[categoria]) {
+                    categorias[categoria] = [];
+                }
+
+                categorias[categoria].push({
+                    nome: nome,
+                    caminho: projeto.path
+                });
+            });
+
+            const container = document.getElementById("projetos");
+            container.innerHTML = "";
+
+            for (const categoria in categorias) {
+                const section = document.createElement("section");
+
+                const titulo = document.createElement("h2");
+                titulo.textContent = categoria;
+
+                const lista = document.createElement("ul");
+
+                categorias[categoria].forEach(projeto => {
+                    const item = document.createElement("li");
+
+                    const link = document.createElement("a");
+
+                    const pasta = projeto.caminho
+                        .split("/")
+                        .slice(0, -1)
+                        .join("/");
+
+                    link.href = `/${repositorio}/${pasta}/`;
+                    link.textContent = projeto.nome;
+
+                    item.appendChild(link);
+                    lista.appendChild(item);
+                });
+
+                section.appendChild(titulo);
+                section.appendChild(lista);
+
+                container.appendChild(section);
+            }
+        }
+
+        carregarProjetos();
+    </script>
+
+</body>
+</html>
