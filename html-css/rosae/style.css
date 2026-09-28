@@ -1,0 +1,403 @@
+:root {
+    --amarelo-gradiente: linear-gradient(90deg, #f7e5a4 0%, #fcdf8a 100%);
+    --amarelo-secundario: #fcdf8a;
+    --amarelo-texto: #252b2e;
+    --azul-gradiente: linear-gradient(90deg, #a1b7cf 0%, #82a4c8 100%);
+    --azul-secundario: #82a4c8;
+    --azul-texto: #F8FAEE;
+}
+
+@font-face {
+    font-family: 'Petit Formal Script';
+    src: url('fonts/PetitFormalScript-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family: 'arial', sans-serif;
+    color: var(--amarelo-texto);
+}
+
+h2 {
+    font-family: 'Petit Formal Script', cursive;
+    color: var(--azul-texto);
+}
+
+p {
+    font-family: 'arial', sans-serif;
+    color: var(--amarelo-texto);
+}
+
+.hero {
+    background: url('images/banner.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 2rem 4rem 2rem;
+}
+
+.cabecalho {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-family: 'Petit Formal Script', cursive;
+}
+
+.menu a {
+    color: var(--amarelo-texto);
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: var(--amarelo-gradiente);
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.menu li:hover {
+    transform: translateY(-4px);
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--azul-texto);
+    font-family: 'Petit Formal Script', cursive;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.btn {
+    background: var(--azul-gradiente);
+    color: var(--azul-texto);
+    font-family: 'Petit Formal Script', cursive;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#btn-banner {
+    font-family: 'arial', sans-serif;
+    background: var(--amarelo-gradiente);
+    color: var(--amarelo-texto);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.flores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background: var(--azul-gradiente);
+}
+
+.card-flor {
+    width: 20rem;
+    background: var(--amarelo-gradiente);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-flor img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-flor h2 {
+    font-size: 1.5rem;
+    color: var(--amarelo-texto);
+    text-align: center;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.card-flor p {
+    font-size: 1rem;
+    color: var(--amarelo-texto);
+    text-align: center;
+    padding: 1rem;
+}
+
+.card-flor .btn {
+    display: inline-block;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.saber-flor {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.saber-flor.invert {
+    flex-direction: row-reverse;
+}
+
+.saber-flor img {
+    width: 50%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.conteudo-flor {
+    padding: 3rem;
+    width: 50%;
+}
+
+.conteudo-flor h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.conteudo-flor p {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#saber-amarela {
+    background: var(--amarelo-gradiente);
+}
+#saber-amarela h2, 
+#saber-amarela p {
+    color: var(--amarelo-texto);
+}
+
+#saber-branca {
+    background: var(--azul-gradiente);
+}
+#saber-branca h2, 
+#saber-branca p {
+    color: var(--azul-texto);
+}
+
+#saber-azul {
+    background: var(--amarelo-secundario);
+}
+#saber-azul h2, 
+#saber-azul p {
+    color: var(--amarelo-texto);
+}
+
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem 2rem;
+    background: var(--azul-gradiente);
+}
+
+.sobre h2 {
+    font-size: 2rem;
+}
+
+.sobre p {
+    font-size: 1.2rem;
+    color: var(--azul-texto);
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 4rem 2rem;
+    background: var(--amarelo-gradiente);
+    color: var(--amarelo-texto);
+}
+
+.contato h2 {
+    font-size: 2rem;
+    color: var(--amarelo-texto);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+input, textarea {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--azul-texto);
+    font-size: 1rem;
+    font-family: 'arial', sans-serif;
+    width: 100%;
+}
+
+label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.btn.submit {
+    font-size: 1.5rem;
+}
+
+footer {
+    background: var(--amarelo-texto);
+    padding: 2rem 1rem;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rodape p {
+    font-size: 0.9rem;
+    color: var(--azul-texto);
+}
+
+/*De 0 até 768px */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .flores {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-flor {
+        width: 100%;
+        max-width: 350px;
+        align-items: center;
+    }
+
+    .saber-flor, .saber-flor.invert {
+        flex-direction: column;
+    }
+
+    .saber-flor img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .conteudo-flor {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p, a {
+        font-size: 1.2rem;
+    }
+
+}
+
+/*De 769px até 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .hero {
+        padding: 1rem 2rem 2rem 2rem;
+    }
+
+    .cabecalho {
+       justify-content: space-between;
+    }
+
+    .banner {
+        gap: 8rem;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .flores {
+        padding: 2rem 1rem;
+        gap: 1rem;
+    }
+
+    .card-flor {
+        flex: 1 1 45%;
+        max-width: 300px;
+    }
+
+    .conteudo-flor {
+        padding: 1.5rem;
+    }
+
+    .conteudo-flor h2 {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+

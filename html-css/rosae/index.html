@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosae</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <header class="cabecalho">
+            <img src="images/logo.svg" alt="Logótipo da Rosae">
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#flores">Flores</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="banner">
+            <h1>Qual o significado das cores das rosas?</h1>
+            <a href="#flores" id="btn-banner" class="btn">Venha conferir conosco!</a>
+        </section>
+    </div>
+
+    <main>
+        <section id="flores" class="flores">
+            <article class="card-flor">
+                <img src="images/rosa_amarela.jpg" alt="Rosa Amarela">
+                <h2>Rosa Amarela</h2>
+                <p>Representa amizade, alegria e o início de uma nova jornada.</p>
+                <a href="#saber-amarela" class="btn">Saber mais</a>
+            </article>
+
+            <article class="card-flor">
+                <img src="images/rosa_branca.jpg" alt="Rosa Branca">
+                <h2>Rosa Branca</h2>
+                <p>Simboliza a pureza, inocência, paz e a reverência espiritual.</p>
+                <a href="#saber-branca" class="btn">Saber mais</a>
+            </article>
+
+            <article class="card-flor">
+                <img src="images/rosa_azul.jpg" alt="Rosa Azul">
+                <h2>Rosa Azul</h2>
+                <p>Inspira o mistério, o impossível de alcançar e a busca pelo infinito.</p>
+                <a href="#saber-azul" class="btn">Saber mais</a>
+            </article>
+        </section>
+
+        <section id="saber-mais" class="saber-mais">
+            <article id="saber-amarela" class="saber-flor">
+                <img src="images/rosa_amarela.jpg" class="rosa-canto" alt="Rosa Amarela">
+                <div class="conteudo-flor">    
+                    <h2>Rosa Amarela</h2>
+                    <p>São associadas ao sol pela energia que emitem: alegria, amizade e otimismo. É a cor perfeita para presentear bons amigos ou comemorar uma conquista.</p>
+                </div>
+            </article>
+
+            <article id="saber-branca" class="saber-flor invert">
+                <img src="images/rosa_branca.jpg" class="rosa-canto" alt="Rosa Branca">
+                <div class="conteudo-flor">   
+                    <h2>Rosa Branca</h2>
+                    <p>A cor branca indica pureza, paz e novos começos. Ela é a estrela de casamentos e também é uma escolha respeitosa em homenagens e condolências.</p>
+                </div>
+            </article>
+
+            <article id="saber-azul" class="saber-flor">
+                <img src="images/rosa_azul.jpg" class="rosa-canto" alt="Rosa Azul">
+                <div class="conteudo-flor">
+                    <h2>Rosa Azul</h2>
+                    <p>Não existe uma rosa azul na natureza, elas são tingidas artificialmente e representam o inatingível, sonhos grandiosos e o desejo de alcançar o extraordinário.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <h2>Sobre a Rosae</h2>
+            <p>Essa é uma página dedicada aos estudos e para compartilhar o simbolismo que atribuímos as rosas. Sinta-se a vontade para pesquisar mais sobre os significados das flores, é um universo acolhedor e muito inspirador.</p>
+        </section>
+
+        <section id="contato" class="contato">
+            <h2>Entre em contato conosco</h2>
+            <form class="form" action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite o seu e-mail" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua mensagem" required></textarea>
+
+                <button class="btn submit" type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="rodape"> 
+            <img src="images/logo.svg" alt="Logótipo da Rosae">
+            <p>&copy; 2026 Rosae. Todos os direitos reservados.</p>
+        </div> 
+    </footer>
+</body>
+</html>
