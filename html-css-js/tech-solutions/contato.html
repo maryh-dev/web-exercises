@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em Contato - TechSolutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="pageHeader" class="header">
+        <h1>TechSolutions</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="theme-buttons">
+            <button onclick="darkMode()" class="btn">Modo Escuro</button>
+            <button onclick="lightMode()" class="btn">Modo Claro</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Entre em Contato</h1>
+        <p>Gostou dos nossos serviços? Preencha o formulário abaixo e nossa equipe entrará em contato com você.</p>
+
+        <form id="contactForm" class="contact-form" onsubmit="sendMessage(event)">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Informe o assunto" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" rows="5" required></textarea>
+
+            <button type="submit" class="btn">Enviar mensagem</button>
+            <p id="statusMessage">Preencha o formulário para entrar em contato conosco.</p>
+        </form>
+    </main>
+    <footer class="footer">© 2026 TechSolutions - Soluções digitais para pequenas empresas.</footer>
+    <script src="script.js"></script>
+</body>
+</html>

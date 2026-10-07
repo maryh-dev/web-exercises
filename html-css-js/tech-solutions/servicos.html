@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSolutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="pageHeader" class="header">
+        <h1>TechSolutions</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="theme-buttons">
+            <button onclick="darkMode()" class="btn">Modo Escuro</button>
+            <button onclick="lightMode()" class="btn">Modo Claro</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Nossos Serviços</h1>
+
+        <section class="servicos">
+            <article class="service-card">
+                <h2>Desenvolvimento de Sites</h2>
+                <p id="texto1">Criamos sites modernos, responsivos e personalizados para empresas que desejam fortalecer sua presença digital e apresentar seus produtos e serviços na internet.</p>
+                <button onclick="showMore('texto1')" class="btn">Saiba Mais</button>
+            </article>
+
+            <article class="service-card">
+                <h2>Desenvolvimento de Aplicativos</h2>
+                <p id="texto2">Desenvolvemos aplicativos para facilitar o acesso dos clientes aos serviços e informações da empresa.</p>
+                <button onclick="showMore('texto2')" class="btn">Saiba Mais</button>
+            </article>
+
+            <article class="service-card">
+                <h2>Sistemas para Empresas</h2>
+                <p id="texto3">Criamos sistemas web para ajudar empresas a organizar clientes, produtos, informações e processos internos.</p>
+                <button onclick="showMore('texto3')" class="btn">Saiba Mais</button>
+            </article>
+
+        </section>
+    </main>
+    <footer class="footer">© 2026 TechSolutions - Soluções digitais para pequenas empresas.</footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #243447;
+    background: #f4f7fb;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 8%;
+    color: white;
+    background: #12355b;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.theme-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+main {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.footer {
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+    background: #12355b;
+}
+
+.hero,
+.about,
+.contact-form {
+    text-align: center;
+}
+
+.hero {
+    padding: 2rem 0;
+}
+
+.hero h2 {
+    color: #12355b;
+    font-size: 2rem;
+}
+
+.services,
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.cards,
+.service-card,
+.contact-form {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+.btn {
+    padding: 0.7rem 1rem;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    background: #1768ac;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0f4c81;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    max-width: 650px;
+    margin: 2rem auto;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #bdc9d6;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.contact-form .btn {
+    align-self: flex-start;
+}
+
+#statusMessage {
+    color: #52616b;
+}
+
+@media (max-width: 700px) {
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .theme-buttons {
+        width: 100%;
+    }
+
+    .services,
+    .servicos {
+        grid-template-columns: 1fr;
+    }
+}

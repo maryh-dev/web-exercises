@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSolutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="pageHeader" class="header">
+        <h1>TechSolutions</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="theme-buttons">
+            <button onclick="darkMode()" class="btn">Modo Escuro</button>
+            <button onclick="lightMode()" class="btn">Modo Claro</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2 id="mainTitle">Tecnologia que transforma ideias em soluções.</h2>
+            <p>A TechSolutions desenvolve soluções digitais para pequenas empresas que desejam crescer, melhorar seus processos e oferecer uma experiência melhor para seus clientes.</p>
+        </section>
+
+        <section class="services">
+            <article class="cards">
+                <h3>Inovação</h3>
+                <p>Utilizamos tecnologia para transformar ideias em soluções.</p>
+            </article>
+            
+            <article class="cards">
+                <h3>Qualidade</h3>
+                <p>Desenvolvemos projetos pensando nas necessidades de cada cliente.</p>
+            </article>
+
+            <article class="cards">
+                <h3>Tecnologia</h3>
+                <p>Utilizamos ferramentas modernas para criar soluções eficientes.</p>  
+            </article>
+        </section>
+
+        <div class="about">
+            <h3 id="conhecer">Clique no botão para conhecer nossa empresa.</h3>
+            
+             <button onclick="about()" id="about" class="btn">Conheça a TechSolutions</button>
+             <button onclick="restorePage()" class="btn">Restaurar página</button>
+        </div>
+    </main>
+    <footer class="footer">© 2026 TechSolutions - Soluções digitais para pequenas empresas.</footer>
+    <script src="script.js"></script>
+</body>
+</html>
