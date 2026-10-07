@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Cartão Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class= "container">
+
+    <div class="conteudo">
+        <h1 id="titulo">Olá, seja bem vindo(a)!</h1>
+        <span id="nome"></span>
+        <p id="descricao">Clique no botão para ver mais sobre mim!</p>
+        <p id="mensagem"></p>
+    </div>
+
+    <div class="botoes">
+        <button onclick="verMais()" id="btnVer">Ver mais</button>
+        <button hidden onclick="window.location.reload()" id="btnResetar">Redefinir</button>
+    </div>
+
+    <div class="contato">
+        <a href="link-do-perfil.com" target="_Blank"><iconify-icon class="icone-midias" icon="akar-icons:instagram-fill"></iconify-icon></a>
+        <a href="link-do-perfil.com" target="_Blank"><iconify-icon class="icone-midias" icon="ant-design:linkedin-outlined"></iconify-icon></a>
+    </div>
+
+    </section>
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
