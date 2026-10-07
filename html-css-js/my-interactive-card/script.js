@@ -14,6 +14,7 @@ function verMais() {
 
     btnVer.hidden = true;
     btnResetar.hidden = false;
+    nome.hidden = false;
 
    alert("Yaaay!"); 
 }
